@@ -31,7 +31,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="features" className="py-20 lg:pb-40 lg:pt-48 bg-background">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Discover our services</h2>
         <div className="flex flex-wrap flex-col sm:flex-row sm:-mx-3 mt-12">
@@ -90,7 +90,7 @@ export default () => (
       }
       secondarySlot={<SvgCharts />}
     />
-    <section id="testimonials" className="py-20 lg:py-40">
+    <section id="testimonials" className="py-20 lg:py-40 bg-background">
       <div className="container mx-auto">
         <LabelText className="mb-8 text-gray-600 text-center">Our lovely clients</LabelText>
         <div className="flex flex-col md:flex-row md:-mx-3">
@@ -102,7 +102,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section className="container mx-auto my-20 py-24 bg-primary-lighter rounded-lg text-center">
+    <section className="container mx-auto my-20 py-24 bg-background rounded-lg text-center">
       <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
       <p className="mt-8 text-xl font-light">
         Contact us now to get started.
