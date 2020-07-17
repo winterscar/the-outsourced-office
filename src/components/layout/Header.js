@@ -16,11 +16,11 @@ const Header = () => (
         <AnchorLink className="px-4" href="#home">
           home
         </AnchorLink>
-        <AnchorLink className="px-4" href="#about">
-          about
-        </AnchorLink>
         <AnchorLink className="px-4" href="#services">
           services
+        </AnchorLink>
+        <AnchorLink className="px-4" href="#about">
+          about
         </AnchorLink>
         <AnchorLink className="px-4" href="#contact">
           contact

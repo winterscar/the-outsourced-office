@@ -13,7 +13,7 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default () => (
   <Layout>
-    <section className="pt-20 md:pt-40">
+    <section id="home" className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl leading-none">
@@ -32,7 +32,7 @@ export default () => (
         </div>
       </div>
     </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+    <section id="services" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">
           Discover our <RoughNotation type="underline" show={true}>Services</RoughNotation>
@@ -80,7 +80,7 @@ export default () => (
     </h2>
     <SplitSection
       reverseOrder
-      id="services"
+      id="about"
       primarySlot={
         <div className="lg:pr-16 xl:pr-32">
           <h3 className="text-3xl font-semibold leading-tight">Olga</h3>
@@ -116,12 +116,12 @@ export default () => (
         </div>
       </div>
     </section>
-    <section className="container mx-auto my-20 py-24 bg-background rounded-lg text-center">
+    <section id="contact" className="container mx-auto my-20 py-24 bg-background rounded-lg text-center">
       <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
       <p className="my-4 text-xl font-light">
         Contact us now to get started.
       </p>
-      <form name="contact" data-netlify="true" action="/thanks.html">
+      <form name="contact" data-netlify="true" action="/thanks">
         <div className="px-8 lg:pl-32 flex flex-row items-stretch">
           <div className="flex-1 flex flex-col text-left">
               <label>Name</label> <input className="mb-2 mt-1 p-2 rounded" type="text" name="name" />
