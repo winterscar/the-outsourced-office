@@ -21,10 +21,10 @@ export default () => (
           <p className="text-xl lg:text-2xl mt-6 font-light">
             Here at the outsourced office, you are our primary concern. So let us manage the time consuming jobs to let you focus on what you do best.
           </p>
-          <p className="mt-8 md:mt-12">
+          <p className="mt-8 md:mt-12 hidden lg:block">
             <Button size="lg">Talk to us</Button>
           </p>
-          <p className="mt-4 text-gray-600">Speak to a real person about your business needs.</p>
+          <p className="mt-4 text-gray-600 hidden lg:block">Speak to a real person about your business needs.</p>
         </div>
         <div className="lg:w-1/2 xl:-mt-24">
           <HeroImage />
@@ -64,6 +64,7 @@ export default () => (
         </div>
       </div>
     </section>
+    <h2 className="text-3xl text-center lg:text-5xl pt-10 font-semibold">About us</h2>
     <SplitSection
       id="services"
       primarySlot={
