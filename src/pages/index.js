@@ -107,9 +107,20 @@ export default () => (
       <p className="mt-8 text-xl font-light">
         Contact us now to get started.
       </p>
-      <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
-      </p>
+      <form name="contact" netlify action="/thanks.html">
+        <p>
+          <label>Name <input className="m-2 p-2 rounded" type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input className="m-2 p-2 rounded" type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your message <input className="m-2 p-2 rounded" type="text" name="message" /></label>
+        </p>
+        <p>
+        <Button size="lg">👋 Send</Button>
+        </p>
+      </form>
     </section>
   </Layout>
 );
