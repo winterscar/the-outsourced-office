@@ -40,11 +40,11 @@ export default () => (
         <div className="flex flex-wrap flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="lg:w-1/3 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Diary management</p>
+              <p className="font-semibold text-xl">Project management</p>
               <p className="mt-4 text-left">
-                Managing your diary can be a time consuming task, especially when it requires phoning other parties for appointments.
-                <br/>
-                We will learn your preferences, and get to know your clients and suppliers by letting us arrange appointments for you. We can manage your work and personal diary.
+              Being able to deliver a project within the constrains of a time frame require good Project management skills. We have a proven record of working closely with teams, using Lean six Sigma methodology, in order to manage and deliver a project.
+              <br/>
+              Securing a sale is the first step but ensuring it is delivered and executed well is where we can step in and work closely with you.   
               </p>
             </Card>
           </div>
@@ -75,33 +75,37 @@ export default () => (
         </div>
       </div>
     </section>
-    <h2 className="text-3xl text-center lg:text-5xl pt-10 pb-16 font-semibold">
-      <RoughNotation type="underline" show={true}>About</RoughNotation> us
-    </h2>
-    <SplitSection
-      reverseOrder
-      id="about"
-      primarySlot={
-        <div className="lg:pr-16 xl:pr-32">
-          <h3 className="text-3xl font-semibold leading-tight">Olga</h3>
-          <p className="mt-8 text-md font-light leading-relaxed">
-          I sing loudly (out of tune), wear mismatching socks and wave at random strangers as I drive. I also pick up litter as I walk, love the colour green, and making others feel good about themselves. I am a mom, best friend, colleague and hard worker. But mostly I am just me.
-          </p>
-        </div>
-      }
-      secondarySlot={<div className="w-64 mx-auto"><OlgaAvatar/></div>}
-    />
-    <SplitSection
-      primarySlot={
-        <div className="lg:pl-16 xl:pl-32">
-          <h3 className="text-3xl font-semibold leading-tight">Chloe</h3>
-          <p className="mt-8 text-md font-light leading-relaxed">
-          I love children and puppies and all things nature. I was a dolphin in my previous life. I usually forget to shave my second leg, and I hate people touching my hair.
-          </p>
-        </div>
-      }
-      secondarySlot={<div className="w-64 mx-auto"><ChloeAvatar/></div>}
-    />
+    <section id="about">
+      <h2 className="text-3xl text-center lg:text-5xl pt-10 pb-16 font-semibold">
+        <RoughNotation type="underline" show={true}>About</RoughNotation> us
+      </h2>
+      <p className="text-md lg:text-lg mt-6 font-light mx-auto max-w-md mb-8 ">
+        We recently celebrated our 5th anniversary and in that time we have worked with many clients, ranging from small one man start-ups to large corporates. Most of our clients have engaged with us continuously over the years. As a diverse team, we are able to bring many different skill sets to the table. 
+      </p>
+      <SplitSection
+        reverseOrder
+        primarySlot={
+          <div className="lg:pr-16 xl:pr-32">
+            <h3 className="text-3xl font-semibold leading-tight">Olga</h3>
+            <p className="mt-8 text-md font-light leading-relaxed">
+            I sing loudly (out of tune), wear mismatching socks and wave at random strangers as I drive. I also pick up litter as I walk, love the colour green, and making others feel good about themselves. I am a mom, best friend, colleague and hard worker. But mostly I am just me.
+            </p>
+          </div>
+        }
+        secondarySlot={<div className="w-64 mx-auto"><OlgaAvatar/></div>}
+      />
+      <SplitSection
+        primarySlot={
+          <div className="lg:pl-16 xl:pl-32">
+            <h3 className="text-3xl font-semibold leading-tight">Chloe</h3>
+            <p className="mt-8 text-md font-light leading-relaxed">
+            I love children and puppies and all things nature. I was a dolphin in my previous life. I usually forget to shave my second leg, and I hate people touching my hair.
+            </p>
+          </div>
+        }
+        secondarySlot={<div className="w-64 mx-auto"><ChloeAvatar/></div>}
+      />
+    </section>
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
         <h2 className="text-3xl lg:text-5xl text-center pb-16 font-semibold">
@@ -121,9 +125,10 @@ export default () => (
       <p className="my-4 text-xl font-light">
         Contact us now to get started.
       </p>
-      <form name="contact" data-netlify="true" action="/thanks">
+      <form name="Contact" method="post" data-netlify-honeypot="dontfill" data-netlify="true" action="/thanks">
         <div className="px-8 lg:pl-32 flex flex-row items-stretch">
           <div className="flex-1 flex flex-col text-left">
+              <input type="hidden" name="bot-field" />
               <label>Name</label> <input className="mb-2 mt-1 p-2 rounded" type="text" name="name" />
               <label>Email</label> <input className="mb-2 mt-1 p-2 rounded" type="email" name="email" />
               <label>Your message</label> <textarea className="mb-2 mt-1 h-48 p-2 rounded" type="text" name="message" />

@@ -22,7 +22,7 @@ export default [
   },
   {
     content:
-      'Working with the Outsourced-Office has allowed our company to drive forward at a time when we really needed extra help. We love working with Olga and the team',
+      'Working with the Outsourced Office has allowed our company to drive forward at a time when we really needed extra help. We love working with Olga and the team',
     customerName: 'Dr. Jill Green',
     customerTitle: 'Storm Training',
     customerImage: 'https://placeimg.com/150/150/people'
@@ -36,21 +36,21 @@ export default [
   },
   {
     content:
-      'Lorum ipsum dolor sit amet',
+      'Working with the Outsourced Office over the last 5 years has been beneficial to us as a company. What started out as us needing some basic admin help has developed into an extension of our team with all their various skills.',
     customerName: 'Richard Acreman',
     customerTitle: 'Partner, WM Reply',
     customerImage: 'https://placeimg.com/150/150/people'
   },
   {
     content:
-      'Lorum ipsum dolor sit amet',
+      'Starting a new business is always daunting and requires you to perform many time consuming admin functions...I used Outsourced Office from the start of my business and they have been an invaluable part of our growth',
     customerName: 'Lance Nichols',
     customerTitle: 'Director, Zenith Lean',
     customerImage: 'https://placeimg.com/150/150/people'
   },
   {
     content:
-      'Lorum ipsum dolor sit amet',
+      'My job requires me to be out of the office most of the day and what a relief it is knowing that the Outsourced Office is there to manage my office when i am out with clients. Great team and amazing to work with!',
     customerName: 'David Keaton',
     customerTitle: 'Sole Proprietor',
     customerImage: 'https://placeimg.com/150/150/people'
