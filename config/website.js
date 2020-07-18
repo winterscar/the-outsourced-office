@@ -4,7 +4,7 @@ module.exports = {
   titleAlt: 'The Outsourced Office', // Title for JSONLD
   description: 'Here at the outsourced office, you are our primary concern. So let us manage the time consuming jobs to let you focus on what you do best.',
   headline: 'Giving you the time to do what you do best.', // Headline for schema.org JSONLD
-  url: 'https://hopeful-booth-87a835.netlify.app', // Domain of your site. No trailing slash!
+  url: 'https://outsourced-office.co.uk', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   logo: '/logos/thumb.png', // Used for SEO
   ogLanguage: 'en_GB', // Facebook Language
