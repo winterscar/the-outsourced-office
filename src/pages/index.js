@@ -23,7 +23,7 @@ export default () => (
             Here at the outsourced office, you are our primary concern. So let us manage the time consuming jobs to let you focus on what you do best.
           </p>
           <p className="mt-8 md:mt-12 hidden lg:block">
-            <Button size="lg">Talk to us</Button>
+            <a href="#contact"><Button size="lg">Talk to us</Button></a>
           </p>
           <p className="mt-4 text-gray-600 hidden lg:block">Speak to a real person about your business needs.</p>
         </div>
