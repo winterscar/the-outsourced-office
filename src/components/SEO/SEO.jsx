@@ -23,6 +23,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       author,
       twitter,
       facebook,
+      favicon
     },
   } = site
 
@@ -54,7 +55,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       '@type': 'Person',
       name: author,
     },
-    copyrightYear: '2019',
+    copyrightYear: '2020',
     creator: {
       '@type': 'Person',
       name: author,
@@ -71,77 +72,6 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
     },
   }
 
-  // Initial breadcrumb list
-
-  const itemListElement = [
-    {
-      '@type': 'ListItem',
-      item: {
-        '@id': siteUrl,
-        name: 'Homepage',
-      },
-      position: 1,
-    },
-  ]
-
-  let schemaArticle = null
-
-  if (article) {
-    schemaArticle = {
-      '@context': 'http://schema.org',
-      '@type': 'Article',
-      author: {
-        '@type': 'Person',
-        name: author,
-      },
-      copyrightHolder: {
-        '@type': 'Person',
-        name: author,
-      },
-      copyrightYear: '2019',
-      creator: {
-        '@type': 'Person',
-        name: author,
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: author,
-        logo: {
-          '@type': 'ImageObject',
-          url: `${siteUrl}${defaultBanner}`,
-        },
-      },
-      datePublished: node.first_publication_date,
-      dateModified: node.last_publication_date,
-      description: seo.description,
-      headline: seo.title,
-      inLanguage: siteLanguage,
-      url: seo.url,
-      name: seo.title,
-      image: {
-        '@type': 'ImageObject',
-        url: seo.image,
-      },
-      mainEntityOfPage: seo.url,
-    }
-    // Push current blogpost into breadcrumb list
-    itemListElement.push({
-      '@type': 'ListItem',
-      item: {
-        '@id': seo.url,
-        name: seo.title,
-      },
-      position: 2,
-    })
-  }
-
-  const breadcrumb = {
-    '@context': 'http://schema.org',
-    '@type': 'BreadcrumbList',
-    description: 'Breadcrumbs list',
-    name: 'Breadcrumbs',
-    itemListElement,
-  }
 
   return (
     <>
@@ -149,11 +79,9 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
         <html lang={siteLanguage} />
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
-        <meta name="gatsby-starter" content="Gatsby Starter Prismic" />
-        {/* Insert schema.org data conditionally (webpage/article) + everytime (breadcrumbs) */}
-        {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
-        {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
-        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+        <meta name="Outsourced Office" content="The Outsourced Office" />
+        <link rel="icon" type="image/svg" href={seo.favicon} sizes="32x32" />
+        <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>
       </Helmet>
       <Facebook
         desc={seo.description}
@@ -199,7 +127,8 @@ const query = graphql`
         ogLanguage
         author
         twitter
-        facebook
+        facebook,
+        favicon
       }
     }
   }

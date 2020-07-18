@@ -15,6 +15,7 @@ module.exports = {
     author: website.author,
     twitter: website.twitter,
     facebook: website.facebook,
+    favicon: website.favicon
   },
   plugins: [
     {

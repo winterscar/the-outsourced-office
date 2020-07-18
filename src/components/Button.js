@@ -6,7 +6,7 @@ const sizes = {
   xl: `py-5 px-16 text-lg`
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({children, className = '', size}) => {
   return (
     <button
       className={`
@@ -17,6 +17,7 @@ const Button = ({ children, className = '', size }) => {
         rounded
         text-white
     `}
+
     >
       {children}
     </button>

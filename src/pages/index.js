@@ -9,7 +9,35 @@ import HeroImage from '../svg/HeroImage';
 import ChloeAvatar from '../svg/ChloeAvatar'
 import OlgaAvatar from '../svg/OlgaAvatar'
 import Messages from '../svg/Messages'
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { navigate } from 'gatsby-link'
+import { RoughNotation } from "react-rough-notation";
+
+var formData = {}
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
+const handleChange = (e) => {
+  formData[e.target.name] = e.target.value
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const form = e.target
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encode({
+      'form-name': form.getAttribute('name'),
+      ...formData,
+    }),
+  })
+    .then(() => navigate(form.getAttribute('action')))
+    .catch((error) => alert(error))
+}
 
 export default () => (
   <Layout>
@@ -125,14 +153,19 @@ export default () => (
       <p className="my-4 text-xl font-light">
         Contact us now to get started.
       </p>
-      <form name="Contact" method="post" data-netlify-honeypot="dontfill" data-netlify="true" action="/thanks">
+      <form name="Contact"
+        method="post"
+        data-netlify-honeypot="dontfill"
+        data-netlify="true"
+        action="/thanks"
+        onSubmit={handleSubmit}>
         <div className="px-8 lg:pl-32 flex flex-row items-stretch">
           <div className="flex-1 flex flex-col text-left">
-              <input type="hidden" name="bot-field" />
-              <label>Name</label> <input className="mb-2 mt-1 p-2 rounded" type="text" name="name" />
-              <label>Email</label> <input className="mb-2 mt-1 p-2 rounded" type="email" name="email" />
-              <label>Your message</label> <textarea className="mb-2 mt-1 h-48 p-2 rounded" type="text" name="message" />
-            <Button type="submit" size="md" className="my-4 p-2">👋 Send</Button>
+              <input  onChange={handleChange} type="hidden" name="dontfill" />
+              <label>Name</label> <input onChange={handleChange} className="mb-2 mt-1 p-2 rounded" type="text" name="PersonName" />
+              <label>Email</label> <input onChange={handleChange} className="mb-2 mt-1 p-2 rounded" type="email" name="Email" />
+              <label>Your message</label> <textarea onChange={handleChange} className="mb-2 mt-1 h-48 p-2 rounded" type="text" name="Message" />
+            <Button id="FormSubmitButton" type="submit" size="md" className="my-4 p-2">👋 Send</Button>
           </div>
           <Messages className="flex-1 hidden lg:inline-block"/>
         </div>
