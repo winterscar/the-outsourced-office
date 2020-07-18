@@ -6,11 +6,11 @@ module.exports = {
   headline: 'Giving you the time to do what you do best.', // Headline for schema.org JSONLD
   url: 'https://hopeful-booth-87a835.netlify.app', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: 'logos/thumb.png', // Used for SEO
+  logo: '/logos/thumb.png', // Used for SEO
   ogLanguage: 'en_GB', // Facebook Language
 
   // JSONLD / Manifest
-  favicon: 'logos/logo.svg', // Used for manifest favicon generation
+  favicon: '/logos/logo.svg', // Used for manifest favicon generation
   shortName: 'OutOffice', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Outsourced Office', // Author for schemaORGJSONLD
   themeColor: '#3D63AE',
