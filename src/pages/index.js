@@ -40,7 +40,7 @@ export default () => (
         <div className="flex flex-wrap flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="lg:w-1/3 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Project management</p>
+              <p className="font-semibold text-xl">🌱Project management</p>
               <p className="mt-4 text-left">
               Being able to deliver a project within the constrains of a time frame require good Project management skills. We have a proven record of working closely with teams, using Lean six Sigma methodology, in order to manage and deliver a project.
               <br/>
@@ -50,7 +50,7 @@ export default () => (
           </div>
           <div className="lg:w-1/3 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Admin support</p>
+              <p className="font-semibold text-xl">🏢 Admin support</p>
               <p className="mt-4 text-left">
                 Has your workload increased and you are not on top of your admin anymore? Or has your staff fallen behind on the workload due to increase in business.
                 <br/>
@@ -62,7 +62,7 @@ export default () => (
           </div>
           <div className="lg:w-1/3 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Event management</p>
+              <p className="font-semibold text-xl">🎈 Event management</p>
               <p className="mt-4 text-left">
                 Does event management send you into panic mode? Don't know where to start and what's involved? Your staff is already at full capacity?
                 <br/>
@@ -79,7 +79,7 @@ export default () => (
       <h2 className="text-3xl text-center lg:text-5xl pt-10 pb-16 font-semibold">
         <RoughNotation type="underline" show={true}>About</RoughNotation> us
       </h2>
-      <p className="text-md lg:text-lg mt-6 font-light mx-auto max-w-md mb-8 ">
+      <p className="text-md lg:text-lg mt-6 mb-16 px-4 font-light mx-auto max-w-sm md:max-w-lg">
         We recently celebrated our 5th anniversary and in that time we have worked with many clients, ranging from small one man start-ups to large corporates. Most of our clients have engaged with us continuously over the years. As a diverse team, we are able to bring many different skill sets to the table. 
       </p>
       <SplitSection
