@@ -32,6 +32,7 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
     description: desc || defaultDescription,
     image: `${siteUrl}${banner || defaultBanner}`,
     url: `${siteUrl}${pathname || ''}`,
+    favicon: favicon
   }
 
   // schema.org in JSONLD format
